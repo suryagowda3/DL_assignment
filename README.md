@@ -1,0 +1,12 @@
+Parameter sharing in the context of deep learning refers to the practice of using the same set of parameters (weights and biases) across different parts or components of a neural network. Instead of having distinct sets of parameters for each part, these shared parameters are used to process and extract features from multiple regions or branches of the input data.
+The concept of parameter sharing is employed to achieve various goals, such as reducing the number of learnable parameters in a model, promoting the learning of common features, and enhancing the generalization ability of the network. It is commonly used in architectures like Convolutional Neural Networks (CNNs) and Siamese networks.
+
+1.Hard Parameter Sharing:
+In hard parameter sharing, the parameters are shared directly between different parts of the model. This means that the weights and biases of one part of the network are identical to those of another part. As a result, all parts of the model learn to represent the same features, and they are forced to be identical or very similar during training.
+Hard parameter sharing is often used in tasks where it is desirable for different parts of the model to learn a common representation. For example, in Siamese networks, two or more identical subnetworks share weights and are trained to produce similar embeddings for similar inputs.
+In hard parameter sharing, the parameters are shared directly between different parts of the model. This means that the weights and biases of one part of the network are identical to those of another part.
+
+2.Soft Parameter Sharing:
+In soft parameter sharing, the parameters are encouraged to be similar but are not strictly enforced to be identical. This is typically achieved by adding a regularization term to the loss function that penalizes the difference between the parameters of different parts of the model. The regularization term allows for some flexibility in the learned representations.
+Soft parameter sharing is useful when you want to encourage similarity between parts of the model but allow for slight differences to capture variations in the data.
+In soft parameter sharing, the parameters are encouraged to be similar but are not strictly enforced to be identical. This is typically achieved by adding a regularization term to the loss function that penalizes the difference between the parameters of different parts of the model.
